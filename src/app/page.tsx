@@ -1,12 +1,9 @@
-import { ClerkProvider } from '@clerk/nextjs';
-import type { AppProps } from 'next/app';
-
-const App = ({ Component, pageProps }: AppProps) => {
+const Page = () => {
   return (
-    <ClerkProvider publishableKey={process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY}>
-      <Component {...pageProps} />
-    </ClerkProvider>
+    <div>
+      <h1>Welcome to Clerk Authentication</h1>
+    </div>
   );
 };
 
-export default App;
+export default Page;
